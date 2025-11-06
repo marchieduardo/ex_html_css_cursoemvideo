@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5  </title>
+</head>
+<body>
+    <h1>Imagens dinâmicas</h1>
+    <p>Tente abrir esse documento em varios dispositivos diferentes 
+    ou aumente e diminua o tamanho do seu navegador</p>
+
+    <picture>
+        <source media="(max-width: 720px)" srcset="media/images/foto-p.png" type="image/png">
+        <source media="(max-width: 1020px)" srcset="media/images/foto-m.png" type="image/png">
+        <img src="media/images/foto-g.png" alt="imagem flexível">
+    </picture>
+
+    <h1>Reproduzindo áudios</h1>
+    <p>Vamos aprender a reproduzir áudios em HTML5</p>
+    <!-- <audio src="media/audios/cascade-breathe-future-garage-412839.mp3" controls autoplay></audio> 
+    Não recomendado pois alguns navegadores podem não rodar este formato de arquivo -->
+    <audio preload="metadata" controls autoplay loop> 
+    <!--preload = se deixar auto ou em branco, espera carregar todo o audio para finalizar o carregamento do site;
+    controls = para aparecer o display de controle de áudio;
+    autoplay = para começar a tocar o áudio automaticamente ao carregar a página caso o navegador dê suporte à função;
+    loop = para ficar tocando o áudio em loop-->
+        <source src="media/audios/cascade-breathe-future-garage-412839.mp3" type="audio/mpeg">
+        <source src="media/audios/cascade-breathe-future-garage-412839.ogg" type="audio/ogg">
+        <source src="media/audios/cascade-breathe-future-garage-412839.wav" type="audio/wav">
+        <p>Infelizmente seu navegador não conseguiu reproduzir este áudio.
+        <a href="media/audios/cascade-breathe-future-garage-412839.mp3">Clique aqui para baixar o arquivo MP3.</a></p>
+    </audio>
+</body>
+</html>
