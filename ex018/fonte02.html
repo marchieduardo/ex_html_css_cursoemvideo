@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes externas</title>
+    <style>
+        @font-face {
+            font-family: 'Oups';
+            src: url('fonts/Oups_Clean.otf') format(opentype); 
+            /* Pode fazer mais importações separando por vírgula após o format()
+            Ex: src: url('Oups.otf') format(opentype), url('Oups.ttf') format(truetype); */
+
+            /*
+            Tipos de format():
+            - opentype (otf)
+            - truetype (ttf)
+            - embedded-opentype
+            - truetype-aat (Apple Advanced Typography)
+            - svg
+            */
+            font-weight: bold; /* --> opcional (e algumas fontes não possuem esta configuração) */
+            font-style: normal; /* --> opcional (e algumas fontes não possuem esta configuração) */
+        }
+
+        body {
+            font-family: Oups;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fontes externas baixadas</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+        Commodi fugiat minus quo optio et dolorum ad aliquam 
+        facere, pariatur tempora, quod quisquam quam nihil 
+        dolores consequatur odio at! Vel, nesciunt!
+    </p>
+</body>
+</html>
