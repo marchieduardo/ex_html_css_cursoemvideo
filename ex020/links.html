@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <style>
+        a {
+            color: red;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* visited = pseudo-classe que aplica a estilização apenas quando o link já foi acessado */
+        a:visited {  
+            color: darkred;
+        }
+
+        /* active = pseudo-classe que aplica a estilização apenas enquanto o elemento está ativo (Ex: ao clicar no elemento) */
+        a:active {
+            color: orangered;
+        }
+
+        /*
+        "::" no CSS = pseudo-elemento
+        after = pseudo-elemento que aparece após o elemento principal
+        before = pseudo-elemento que aparece antes do elemento principal
+        */
+        a::after {
+            content: ' (link)';
+            text-decoration: none;
+            font-weight: normal;
+            color: darkgray;
+        }
+    </style>
+</head>
+<body>
+    <h1>Personalizando links</h1>
+    <ul>
+        <li><a href="https://github.com/marchieduardo" target="_blank" rel="external">Github</a></li>
+        <li><a href="https://www.linkedin.com/in/eduardomarchi/" target="_blank" rel="external">Linkedin</a></li>
+        <li><a href="https://www.instagram.com/marchi.ea/" target="_blank" rel="external">Instagram</a></li>
+    </ul>
+</body>
+</html>
