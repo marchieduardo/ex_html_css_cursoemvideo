@@ -11,8 +11,8 @@ h1 {
 }
 
 /*
-    id no HTML = # no CSS 
-    class no HTML = . no CSS
+    id no HTML = # no CSS (usado para um único elemento)
+    class no HTML = . no CSS (usado para um conjunto de elementos)
 */
 h1#principal {
     color: darkred;
@@ -21,4 +21,20 @@ h1#principal {
 
 h2 {
     color: rgb(129, 94, 6);
+}
+
+.basico {
+    color: green;
+}
+
+.intermediario {
+    color: goldenrod;
+}
+
+.avancado {
+    color: red;
+}
+
+.destaque {
+    text-decoration: underline;
 }
