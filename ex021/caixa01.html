@@ -5,23 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modelo de caixas</title>
     <style>
-        h1 {
+        h1 { /* box-level */
+            /* display: inline; --> Caso queira converter para inline-level */
+
             background-color: burlywood;
             height: 300px;
             width: 300px;
-            border-width: 10px;
+
+            /* border-width: 10px;
             border-style: solid;
-            border-color: orangered;
-            padding-top: 10px;
-            padding-bottom: 10px;
+            border-color: orangered; */
+            border: 10px solid orangered; /*Simplificação com shorthand*/
+
+            /* padding-top: 10px;
             padding-right: 10px;
-            padding-left: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px; */
+            padding: 10px; /*Simplificação com shorthand*/
+
+            /* margin-top: 20px;
+            margin-right: 20px;
+            margin-bottom: 40px;
+            margin-left: 20px; */
+            /* margin: 20px 20px 40px 20px; Simplificação do bloco acima com shorthand */
+            margin: 20px auto 40px auto; /* Shorthand com auto para centralizar nas laterais*/
+            /* ou "margin: auto;" para centralizar a box */
+
+            /* outline-width: 5px;
+            outline-style: dashed;
+            outline-color: grey; */
+            outline: 5px dashed grey; /*Simplificação com shorthand*/
         }
 
-        a {
+        a { /* inline-level */
+            /* display: block; --> Caso queira converter para box-level */
             border-width: 10px;
             border-style: solid;
             border-color: red;
+
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
         }
     </style>
 </head>
