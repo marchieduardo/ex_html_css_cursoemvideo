@@ -20,6 +20,11 @@
         nav {
             background-color: lightslategrey;
             padding: 3px;
+
+            /* Ordem do shorthand abaixo:
+            deslocamento horizontal -> desloc. vertical -> 
+            embaçamento (blur) -> espalhamento(spread) -> cor */
+            box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.5);
         }
 
         nav > a {
@@ -42,6 +47,7 @@
         article {
             background-color: lightgrey;
             padding: 5px;
+            box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.5);
         }
 
         article > aside {
@@ -52,7 +58,12 @@
             background-color: black;
             color: white;
             text-align: center;
-            padding: 1px;
+            padding: 5px;
+            box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.5);
+        }
+
+        footer > p {
+            margin: 0px;
         }
     </style>
 </head>
