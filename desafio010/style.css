@@ -28,6 +28,7 @@
     margin: 0px;
     padding: 0px;
     scroll-behavior: smooth; /* Para o nav descer junto com a tela */
+    font-weight: normal;
 }
 
 img {
@@ -42,6 +43,23 @@ img.pequena {
 
 a.externo::after {
     content: '\00a0\1F517';
+}
+
+.yt-video {
+    background-color: var(--cor5);
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 56.5%;
+    position: relative;
+}
+
+.yt-video > iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    scroll-margin-top: 250px;
 }
 
 body {
@@ -65,7 +83,7 @@ header > h1 {
 
 header > p {
     font-size: 1.2em;
-    padding: 20px;
+    padding: 30px;
     max-width: 500px;
     margin: auto; /* Apesar do text-align no header, é necessário para a centralização, pois, ao colocar uma width, o parágrafo virou uma box. */
 }
@@ -118,7 +136,6 @@ main h1 {
 main h2 {
     color: var(--cor4);
     font-family: var(--fonte-android);
-    font-size: 1.4em;
     background-image: linear-gradient(to right, var(--cor1), transparent);
     padding: 3px;
     text-indent: 10px;
