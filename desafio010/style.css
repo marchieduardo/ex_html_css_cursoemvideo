@@ -27,6 +27,7 @@
 * {
     margin: 0px;
     padding: 0px;
+    scroll-behavior: smooth; /* Para o nav descer junto com a tela */
 }
 
 img {
@@ -35,7 +36,7 @@ img {
 
 img.pequena {
     max-width: 350px;
-    display: block; /*Necessário para centralização, pois a imagem por padrão não é um bloco*/
+    display: block; /* Necessário para centralização, pois a imagem por padrão não é um bloco */
     margin: auto;
 }
 
@@ -74,6 +75,9 @@ nav {
     padding: 10px;
     box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.300);
     text-align: center;
+    position: sticky; /* Para o nav descer junto com a tela */
+    top: 0; /* Para manter o nav no topo */
+    z-index: 100; /* Para garantir que o nav não seja coberto (camada) */
 }
 
 nav > a {
@@ -102,6 +106,10 @@ main{
     border-bottom-right-radius: 10px;
 }
 
+main > article {
+    scroll-margin-top: 70px;
+}
+
 main h1 {
     color: var(--cor4);
     font-family: var(--fonte-android);
@@ -119,8 +127,8 @@ main h2 {
 main p {
     margin: 15px 0px;
     text-align: justify;
-    text-indent: 30px; /*recuo no início do parágrafo*/
-    line-height: 2em; /*espaço entre as linhas*/
+    text-indent: 30px; /* Recuo no início do parágrafo */
+    line-height: 2em; /* Espaço entre as linhas */
     font-size: 1.1em;
 }
 
@@ -158,7 +166,7 @@ aside > h3 {
 }
 
 aside > ul {
-    list-style-type: '\2714\00A0\00A0'; /*2714 = emoji de check; 00A0 = espaço não separável*/
+    list-style-type: '\2714\00A0\00A0'; /* 2714 = emoji de check; 00A0 = espaço não separável */
     list-style-position: inside;
     columns: 2;
 }
