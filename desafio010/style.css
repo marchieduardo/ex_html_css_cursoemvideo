@@ -39,6 +39,10 @@ img.pequena {
     margin: auto;
 }
 
+a.externo::after {
+    content: '\00a0\1F517';
+}
+
 body {
     background-color: var(--cor0);
     font-family: var(--fonte-padrao);
@@ -69,6 +73,7 @@ nav {
     background-color: var(--cor5);
     padding: 10px;
     box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.300);
+    text-align: center;
 }
 
 nav > a {
@@ -98,7 +103,7 @@ main{
 }
 
 main h1 {
-    color: var(--cor5);
+    color: var(--cor4);
     font-family: var(--fonte-android);
 }
 
@@ -137,8 +142,42 @@ main a:hover {
     color: var(--cor4);
 }
 
+aside {
+    background-color: var(--cor1);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+aside > h3 {
+    background-color: var(--cor4);
+    color: white;
+    padding: 10px;
+    margin: -10px -10px 0px -10px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+aside > ul {
+    list-style-type: '\2714\00A0\00A0'; /*2714 = emoji de check; 00A0 = espaço não separável*/
+    list-style-position: inside;
+    columns: 2;
+}
+
 footer {
     background-color: var(--cor5);
     color: white;
     text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+}
+
+footer a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: var(--cor1);
 }
