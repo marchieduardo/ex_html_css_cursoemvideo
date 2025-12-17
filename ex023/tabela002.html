@@ -14,6 +14,13 @@
             text-align: right;
         }
 
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
+
         thead, tfoot {
             background-color: lightgray;
         }
@@ -29,22 +36,30 @@
     <!--
         Anatomia para tabelas grandes:
         Table {
-            THead {
+            Caption (legenda da tabela);
+            THead (cabeçalho da tabela){
                 tr, td, th
             };
-            TBody {
+            TBody (corpo da tabela){
                 tr, td, th
             };
-            TFoot {
+            TFoot (rodapé da tabela){
                 tr, td, th
             };
         };
     -->
     <table>
+        <caption>População das Unidades Federativas</caption>
+
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <!--
+                Scope (escopo);
+                scope="col" = th se aplica a todos os td abaixo dele em sua coluna;
+                scope="row" = th se aplica a todos os td ao lado dele em sua linha;
+                -->
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 100px;">População</th>
             </tr>
         </thead>
 
@@ -187,7 +202,7 @@
 
         <tfoot>
             <tr>
-                <th>Total e habitantes</th>
+                <th scope="row">Total e habitantes</th>
                 <td class="num"><strong>213 421 037</strong></td>
             </tr>
         </tfoot>
