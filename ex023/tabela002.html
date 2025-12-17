@@ -22,6 +22,28 @@
         }
 
         thead, tfoot {
+            background-color: #383838;
+            color: white;
+        }
+
+        /*
+        :nth-child(i) = pseudo-classe para selecionar elementos com base em sua posição (índice) dentro de um grupo de irmãos (elementos filhos do mesmo pai).
+
+        Exemplos comuns {
+            li:nth-child(2): Seleciona o segundo item da lista;
+            p:nth-child(odd): Seleciona todos os parágrafos ímpares (1º, 3º, 5º...);
+            tr:nth-child(even): Seleciona todas as linhas pares de uma tabela (2ª, 4ª, 6ª...);
+            div:nth-child(3n): Seleciona o 3º, 6º, 9º... elementos (múltiplos de 3);
+            span:nth-child(n+5): Seleciona do 5º elemento em diante (5º, 6º, 7º...);
+            article:nth-child(-n+4): Seleciona os primeiros 4 elementos (1º, 2º, 3º, 4º);
+        };
+
+        Argumento 2n {
+            2 = linha selecionada;
+            n = significa que irá se repetir seguindo um passo (neste caso, de duas em duas linhas);
+        };
+        */
+        tbody > tr:nth-child(2n) {
             background-color: lightgray;
         }
 
