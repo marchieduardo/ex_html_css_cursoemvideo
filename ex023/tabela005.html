@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrupamento de colunas</title>
+    <style>
+        table {
+            width: 500px;
+            border-collapse: collapse;
+        }
+
+        caption {
+            font-size: 1.3em;
+            font-weight: bolder;
+            padding: 8px;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        .col-nome {
+            background-color: yellow;
+        }
+
+        .col-dados {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Agrupamento de colunas</h1>
+
+    <table>
+        <!-- Tag "colgroup" para o agrupamento de colunas -->
+        <colgroup>
+            <!-- Dentro da tag "colgroup", colocamos a tag "col", sendo cada uma referênte às colunas da tabela (No caso, 4 colunas) -->
+            <col class="col-nome">
+            <col class="col-dados">
+            <col class="col-dados">
+            <col class="col-dados">
+            <!--
+                Ou podemos selecionar mais de uma coluna de uma vez, usando o atributo span. Usando o caso acima, abaixo vai um exemplo de como ficaria se selecionasse de uma vez as 3 últimas das 4 colunas: 
+
+                <colgroup>
+                    <col class="col-nome">
+                    <col class="col-dados" span="3">
+                </colgroup>
+            -->
+        </colgroup>
+
+        <caption>Cadastro</caption>
+
+        <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Sexo</th>
+            <th scope="col">Idade</th>
+            <th scope="col">Profissão</th>
+        </tr>
+
+        <tr>
+            <td>Ana Maria</td>
+            <td>F</td>
+            <td>62</td>
+            <td>Encanadora</td>
+        </tr>
+
+        
+        <tr>
+            <td>Augusto</td>
+            <td>M</td>
+            <td>24</td>
+            <td>Garoto de programa</td>
+        </tr>
+        
+        <tr>
+            <td>Fala fina</td>
+            <td>M</td>
+            <td>38</td>
+            <td>Olheiro</td>
+        </tr>
+        
+        <tr>
+            <td>Jorge</td>
+            <td>Jorge</td>
+            <td>Jorge</td>
+            <td>Jorge</td>
+        </tr>
+
+        <tr>
+            <td>Jurema</td>
+            <td>F</td>
+            <td>86</td>
+            <td>Tia da merenda</td>
+        </tr>
+
+        <tr>
+            <td>Claudio</td>
+            <td>M</td>
+            <td>19</td>
+            <td>Necromante</td>
+        </tr>
+    </table>
+</body>
+</html>
