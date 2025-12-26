@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas responsivas</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        caption {
+            font-size: 1.3em;
+            font-weight: bolder;
+            padding: 20px;
+        }
+
+        thead {
+            background-color: gray;
+            color: white;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        tr:nth-child(even) {
+            background-color: lightgray;
+        }
+
+        #container {
+            overflow-x: auto; /* Para que a rolagem se aplique somente à tabela ao invés da página inteira (o "x" significa que estamos tratanto apenas da rolagem horizontal) */
+        }
+    </style>
+</head>
+<body>
+    <h1>Tabelas em telas pequenas</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus nisi cupiditate officiis, reprehenderit dolores aliquid tempora harum possimus quos deserunt deleniti nobis obcaecati, laboriosam saepe facilis. Pariatur facilis quas magnam?</p>
+
+    <!-- Overflow só funciona em elementos em nível de bloco, no qual tabelas não se encaixam. Sendo assim, a maneira mais fácil de resolver foi envelopar a tabela dentro de uma div -->
+    <div id="container">
+        <table>
+            <caption>Tabelas responsivas</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Produto</th>
+                    <th scope="col">Janeiro</th>
+                    <th scope="col">Fevereiro</th>
+                    <th scope="col">Março</th>
+                    <th scope="col">Abril</th>
+                    <th scope="col">Maio</th>
+                    <th scope="col">Junho</th>
+                    <th scope="col">Julho</th>
+                    <th scope="col">Agosto</th>
+                    <th scope="col">Setembro</th>
+                    <th scope="col">Outubro</th>
+                    <th scope="col">Novembro</th>
+                    <th scope="col">Dezembro</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>TV 40"</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>07</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>10</td>
+                    <td>05</td>
+                    <td>02</td>
+                    <td>01</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td>Paredão de som</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>07</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>10</td>
+                    <td>05</td>
+                    <td>02</td>
+                    <td>01</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td>Samsung Galaxy J7</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>07</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>10</td>
+                    <td>05</td>
+                    <td>02</td>
+                    <td>01</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td>Chevrolet Corsinha Amarelo</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>07</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>10</td>
+                    <td>05</td>
+                    <td>02</td>
+                    <td>01</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td>IPTV BOX Piratex</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>07</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>10</td>
+                    <td>05</td>
+                    <td>02</td>
+                    <td>01</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td>Oitão 5 Tiros Enferrujado</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>07</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>10</td>
+                    <td>05</td>
+                    <td>02</td>
+                    <td>01</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td>Gudangzinho Paraguaio</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>07</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>10</td>
+                    <td>05</td>
+                    <td>02</td>
+                    <td>01</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>16</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
