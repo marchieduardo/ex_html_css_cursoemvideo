@@ -25,8 +25,14 @@
 
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum in veniam adipisci, quas expedita accusamus laudantium saepe magni soluta recusandae cumque iure doloremque maiores commodi dolore vitae veritatis consequuntur nobis! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat distinctio debitis cum provident assumenda quos aperiam fuga officia magni iste veniam, harum, pariatur minus? Consequuntur, esse. Possimus facere quisquam hic!</p>
 
-    <!-- Para que a seleção de frames acima funcione, se faz necessário definir um name para o iframe -->
-    <iframe name="frame">Página selecionada</iframe>
+    <iframe name="frame" srcdoc="
+    <h1>Escolha uma das páginas acima</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores dicta neque minus optio necessitatibus mollitia, voluptatibus quaerat nulla vero animi voluptatem perspiciatis labore cum iure deserunt quam doloribus non nostrum!</p>
+    <img src='assets/images/emoji-like.png'>">
+        <!-- Para que a seleção de frames acima funcione, se faz necessário definir um name para o iframe -->
+        <!-- src aponta para um arquivo ou URL externo, enquanto o srcdoc contém o código HTML embutido diretamente na página, dentro do próprio atributo. -->
+        Página selecionada
+    </iframe>
 
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti repudiandae itaque ut temporibus. Veritatis harum deserunt voluptates vero amet voluptatibus ipsa, sequi obcaecati quae officiis ipsam? Consectetur adipisci totam accusantium! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos harum, eaque quidem amet placeat repudiandae possimus deleniti perspiciatis rerum commodi ex at molestiae, exercitationem ut nemo minus a? Veritatis, quasi.</p>
 </body>
