@@ -3,6 +3,7 @@
 * {
     margin: 0px;
     padding: 0px;
+    user-select: none;
 }
 
 body {
@@ -34,4 +35,27 @@ iframe {
     left: 22px;
     width: 268px;
     height: 471px;
+}
+
+nav {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+nav img {
+    display: block;
+    width: 60px;
+    margin: 20px 10px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    box-sizing: border-box;
+}
+
+nav img:hover {
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    transform: translate(-3px, -3px);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+    transition: transform 0.2s, box-shadow .2s, border .2s; /* para dar um "delay" ao aplicar nova estilização */
 }

@@ -10,9 +10,16 @@
 <body style="background-image: url(assets/images/fundo-madeira.jpg);">
     <main>
         <section id="tela">
-            <iframe src="pages/home.html" name="frame" frameborder="0"></iframe>
+            <iframe src="pages/home.html" name="frame" title="Janela de conteúdo" frameborder="0">Seu navegador não suporta iframes</iframe>
         </section>
-        <section id="menu"></section>
+        <section id="menu">
+            <nav aria-label="Menu">
+                <a href="pages/home.html" target="frame"><img src="assets/images/logo-home.jpg" alt="Home"></a>
+                <a href="#" target="frame"><img src="assets/images/logo-linkedin.jpg" alt="LinkedIn"></a>
+                <a href="#" target="frame"><img src="assets/images/logo-github.jpg" alt="GitHub"></a>
+                <a href="#" target="frame"><img src="assets/images/logo-instagram.jpg" alt="Instagram"></a>
+            </nav>
+        </section>
     </main>
 </body>
 </html>
