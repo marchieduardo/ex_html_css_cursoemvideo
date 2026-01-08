@@ -15,11 +15,12 @@
 
     <!--
         Form {
-            action = define a URL (endereço) para onde os dados do formulário serão enviados quando o usuário clicar no botão de submissão (submit);
-            autocomplete = para exibir ou não (on/off) a caixa de sugestão de informações salvas;
+            Action = define a URL (endereço) para onde os dados do formulário serão enviados quando o usuário clicar no botão de submissão (submit);
+            Method = método de requisição HTTP (GET, POST, PUT, DELETE,...);
+            Autocomplete = para exibir ou não (on/off) a caixa de sugestão de informações salvas;
         }
     -->
-    <form action="cadastro.py" autocomplete="off">
+    <form action="cadastro.py" method="POST" autocomplete="off">
         <div>
             <label for="nome-id">Nome:</label> <!-- No "for" do label, usa-se o id -->
             <input type="text" name="nome" id="nome-id">
