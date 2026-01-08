@@ -4,13 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário</title>
+    <style>
+        div {
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
     <h1>Meu primeiro formulário</h1>
-    <form>
-        <p>Nome: <input type="text" name="nome" id="nome"></p>
-        <p>Sobrenome: <input type="text" name="sobrenome" id="sobrenome"></p>
-        <p><input type="submit" value="Enviar"></p>
+
+    <!--
+        Form {
+            action = define a URL (endereço) para onde os dados do formulário serão enviados quando o usuário clicar no botão de submissão (submit);
+            autocomplete = para exibir ou não (on/off) a caixa de sugestão de informações salvas;
+        }
+    -->
+    <form action="cadastro.py" autocomplete="off">
+        <div>
+            <label for="nome-id">Nome:</label> <!-- No "for" do label, usa-se o id -->
+            <input type="text" name="nome" id="nome-id">
+        </div>
+        <div>
+            <label for="sobrenome-id">Sobrenome:</label>
+            <input type="text" name="sobrenome" id="sobrenome-id">
+        </div>
+        <div>
+            <input type="submit" value="Enviar">
+        </div>
     </form>
 </body>
 </html>
