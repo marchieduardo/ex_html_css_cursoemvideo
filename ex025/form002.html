@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inputs</title>
+    <style>
+        div {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste de formulário</h1>
+    <form action="cadastro.py" method="POST" autocomplete="on">
+        <div>
+            <label for="name-id">Usuário:</label>
+            <input 
+            type="text" 
+            name="user-name" 
+            id="name-id" 
+            required 
+            minlength="5" 
+            maxlength="15" 
+            size="10" 
+            placeholder="Digite seu nome de usuário" autocomplete="username"
+            >
+            <!--
+                required = campo obrigatório;
+                minlength e maxlength = mínimo e máximo de caracteres obrigatórios;
+                size = tamanho da caixa em caracteres(aproximadamente);
+                placeholder = dá uma dica/exemplo do que digitar no campo;
+                autocomplete = com o autocomplete em "on" no form, aqui é usado para relacionar que tipo de dado está tratando;
+            -->
+        </div>
+        <div>
+            <label for="password-id">Senha:</label>
+            <input 
+                type="password" 
+                name="user-pwd" 
+                id="password-id" 
+                required minlength="8" 
+                maxlength="20" 
+                placeholder="Digite sua senha" 
+                autocomplete="current-password"
+            >
+        </div>
+        <div>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </div>
+    </form>
+</body>
+</html>
