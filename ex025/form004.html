@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário com telefone e e-mail</title>
+    <style>
+        div {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de formulário</h1>
+    <form action="cadastro.py" method="get">
+        <fieldset> <!-- usado para agrupar campos relacionados dentro de um formulário -->
+            <legend>Dados pessoais</legend> <!-- título do fieldset -->
+            <div>
+                <label for="user-id">Nome:</label>
+                <input type="text" name="user-name" id="user-id" required>
+            </div>
+            <div>
+                <label for="email-id">Email:</label>
+                <input
+                    type="email"
+                    name="user-email"
+                    id="email-id"
+                    required
+                    autocomplete="email"
+                >
+            </div>
+            <div>
+                <label for="phone-number-id">Telefone:</label>
+                <input
+                    type="tel"
+                    name="user-phone-number"
+                    id="phone-number-id"
+                    required
+                    autocomplete="tel"
+                    pattern="^\(\d{2}\)\d{4,5}-\d{4}$"
+                    placeholder="(xx)xxxxx-xxxx"
+                >
+                <!--
+                    pattern = é usado para especificar uma expressão regular (regex) que o valor do elemento <input> deve corresponder para ser considerado válido;
+                -->
+            </div>
+            <div>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>
