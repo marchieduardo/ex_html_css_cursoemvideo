@@ -3,7 +3,7 @@ import os
 
 class MeuServidor(BaseHTTPRequestHandler):
     def do_GET(self):
-        caminho_arquivo = os.path.join(os.path.dirname(__file__), 'form004.html') # mudar o nome do arquivo no caminho para reaproveitar este servidor http em outros exercícios
+        caminho_arquivo = os.path.join(os.path.dirname(__file__), 'form005.html') # mudar o nome do arquivo no caminho para reaproveitar este servidor http em outros exercícios
 
         self.send_response(200)
         self.send_header('Content-type', 'text/html; charset=utf-8')
