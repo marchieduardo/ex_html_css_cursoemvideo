@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos color, range e file</title>
+    <style>
+        div {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de formulário</h1>
+    <form action="cadastro.py" method="get">
+        <div>
+            <label for="color-id">Cor:</label>
+            <input
+                type="color"
+                name="color-hex"
+                id="color-id"
+            >
+            <!-- input do tipo "color" retorna uma string com código hexadecimal da cor selecionada -->
+        </div>
+        <div>
+            <label for="review-id">Avaliação:</label>
+            <input
+                type="range"
+                name="user-review"
+                id="review-id"
+                min="1"
+                max="5"
+            >
+            <!-- input do tipo "range" retorna uma STRING com um número de 0 a 100 por padrão (pode ser mudado com os atributos "min" e "max"), no qual representa a posição da "bolinha" -->
+        </div>
+        <div>
+            <label for="photo-id">Foto de perfil:</label>
+            <input
+                type="file"
+                name="user-photo"
+                id="photo-id"
+            >
+            <!-- input do tipo file permite selecionar um ou mais arquivos do seu dispositivo para upload. caso o formulário use o método GET será enviado somente o nome do arquivo. para que seja enviado o arquivo, usa-se o método POST -->
+        </div>
+        <div>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </div>
+    </form>
+</body>
+</html>
