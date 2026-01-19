@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select, datalist e textarea</title>
+    <style>
+        div {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de formulário</h1>
+    <form action="cadastro.py" method="POST">
+        <div>
+            <label for="state-id">Estado:</label>
+            <!-- a tag <select> cria uma lista suspensa (dropdown) para o usuário escolher uma ou mais opções em um formulário -->
+            <select name="state" id="state-id" required>
+                <!-- a tag <optgroup>, conhecida como option group, serve para agrupar logicamente itens <option> dentro de um elemento <select>. E nela, usa-se o label como atributo para nomear o grupo. -->
+                <optgroup label="Região Sudeste">
+                    <!-- e a tag <option> cria as opções da lista suspensa -->
+                    <option value="MG">Minas Gerais</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="SP">São Paulo</option>
+                </optgroup>
+                <optgroup label="Região Sul">
+                    <option value="PR">Paraná</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="SC">Santa Catarina</option>
+                </optgroup>
+
+                <option value="" selected disabled hidden>
+                    --- Selecione um Estado ---
+                    <!--
+                        option como placeholder para apenas para instruir o usuário ("Selecione uma opção").
+
+                        value="" → não representa um dado válido, evitando envio incorreto ao backend.
+
+                        Atributos {
+                            selected → faz essa opção aparecer como padrão ao carregar a página;
+                            disabled → impede que essa opção seja selecionada ou enviada no formulário;
+                            hidden   → evita que o placeholder apareça novamente na lista após a seleção;
+                        }
+                    -->
+                </option>
+            </select>
+        </div>
+
+        <div>
+            <label for="profession-id">Profissão:</label>
+            <input
+                type="text"
+                name="prefession-name"
+                id="profession-id"
+                list="profession-list"
+                required
+            >
+            <datalist id="profession-list">
+                <!--
+                    <datalist> fornece sugestões de valores para um <input>, sem limitar a entrada do usuário.
+
+                    O usuário pode escolher uma opção da lista ou digitar qualquer outro valor.
+                    As opções servem apenas como auxílio (autocomplete), não como validação.
+
+                    Funciona em conjunto com <input list="id-do-datalist">.
+                    Não substitui <select> quando é necessário restringir valores.
+
+                    A validação do valor digitado deve ser feita no frontend ou backend.
+                -->
+                <option value="ADM">Administrador</option>
+                <option value="CONT">Contabilista</option>
+                <option value="DEV">Desenvolvedor</option>
+                <option value="PROF">Professor</option>
+            </datalist>
+        </div>
+
+        <div>
+            <label for="message-id">Mensagem:</label><br>
+            <!--
+                <textarea> é usada para entrada de texto longo (múltiplas linhas).
+
+                Diferente do <input>, permite quebras de linha.
+                O conteúdo vai entre a tag de abertura e fechamento (não usa value).
+
+                Aceita atributos como rows, cols, placeholder, required e maxlength.
+                Ideal para comentários, descrições e mensagens longas.
+            -->
+            <textarea name="message" id="message-id" cols="30" rows="5" placeholder="Digite seu texto..."></textarea>
+        </div>
+
+        <div>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </div>
+    </form>
+</body>
+</html>
