@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elemento output em formulários 2</title>
+    <style>
+        div {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de formulário</h1>
+    <form action="cadastro.py" method="get">
+        <div>
+            <label for="num-id">Número:</label>
+            <input
+                type="range"
+                name="number-range"
+                id="num-id"
+                min="0"
+                max="10"
+                oninput="document.getElementById('value-id').innerHTML = Number(document.getElementById('num-id').value)"
+            >
+            <output id="value-id">5</output>
+        </div>
+
+        <div>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </div>
+    </form>
+</body>
+</html>

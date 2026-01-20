@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elemento output em formulários 3</title>
+    <style>
+        div {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de formulário</h1>
+    <form action="cadastro.py" method="get">
+        <div>
+            <label for="year-id">Ano de nascimento:</label>
+            <input
+                type="number"
+                name="birth-year"
+                id="year-id"
+                required
+                min="1900"
+                max="2030"
+                oninput="ageCalc()"
+            >
+        </div>
+
+        <div>
+            <label for="age-id">Sua idade é:</label>
+            <output id="age-id">0</output>
+        </div>
+
+        <div>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </div>
+    </form>
+
+    <script>
+        function ageCalc() {
+            // função para capturar o ano atual e subtrair pelo ano de nascimento para descobrir a idade
+            let currentYear = new Date().getFullYear();
+            document.getElementById('age-id').innerHTML = Number(currentYear) - Number(document.getElementById('year-id').value);
+        }
+    </script>
+</body>
+</html>

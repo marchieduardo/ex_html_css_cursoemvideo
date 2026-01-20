@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elemento output em formulários</title>
+    <style>
+        div {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de formulário</h1>
+    <form action="cadastro.py" method="get">
+        <div>
+            <label for="num-1">Número 1:</label>
+            <input
+                type="number"
+                name="first-num"
+                id="num-1"
+                required
+                min="0"
+                max="100"
+                oninput="numbersSum()"
+            >
+            <!--
+                oninput executa um código(JavaScript) sempre que o valor do campo é alterado.
+
+                Dispara a cada digitação, colagem ou alteração do input.
+                É usado para atualização em tempo real (cálculos, validações, output).
+
+                Diferente de onchange, não depende da perda de foco.
+            -->
+
+        </div>
+
+        <div>
+            <label for="num-2">Número 2:</label>
+            <input
+                type="number"
+                name="second-num"
+                id="num-2"
+                required
+                min="0"
+                max="100"
+                oninput="numbersSum()"
+            >
+        </div>
+
+        <div>
+            <label for="sum-id">Soma:</label>
+            <output id="sum-id">0</output>
+            <!--
+                <output> representa o resultado de um cálculo ou processamento no formulário.
+
+                É usado para exibir valores gerados por JavaScript ou por interação do usuário.
+                Não recebe entrada direta do usuário.
+
+                Melhora a semântica ao indicar que o valor exibido é um resultado.
+                Normalmente associado a inputs via atributos como for ou id.
+
+                Obs: O elemento output não envia dado algum no submit. Serve apenas para exibição no frontend.
+            -->
+        </div>
+
+        <div>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </div>
+    </form>
+
+    <script>
+        function numbersSum(){
+            // função para somar os números e exibir resultado no output
+            const a = Number(document.getElementById('num-1').value);
+            const b = Number(document.getElementById('num-2').value);
+            document.getElementById('sum-id').innerHTML = a + b;
+        }
+    </script>
+</body>
+</html>
