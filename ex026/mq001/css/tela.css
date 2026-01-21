@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+/* Estilização para telas */
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: lightgray;
+}
+
+header > h1 {
+    text-align: center;
+}
+
+menu {
+    background-color: gray;
+}
+
+menu ul {
+    list-style-type: none;
+}
+
+menu li {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+
+article {
+    max-width: 600px;
+    margin: auto;
+}
