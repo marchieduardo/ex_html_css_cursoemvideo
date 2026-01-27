@@ -11,13 +11,16 @@
         box-sizing: border-box;
     }
 
-    body {
+    html{
         width: 100vw;
         height: 100vh;
+    }
+
+    body {
         background: black url(../images/back-phone.jpg) no-repeat;
         background-size: cover;
         background-position: center;
-        overflow: hidden; /* Para desativar a rolagem da página */
+        /* overflow: hidden; Para desativar a rolagem da página, mas acabou sendo desnecessário colocando o width e height no html ao invés do body */
     }
 
     main {
@@ -36,11 +39,10 @@
     }
 
     img {
-        display: block;
         margin: auto;
     }
 
-    /* #phone {display: none;} */
+    #phone {display: block;}
     #tablet {display: none;}
     #print {display: none;}
     #pc {display: none;}
