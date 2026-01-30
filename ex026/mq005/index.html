@@ -4,12 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu responsivo com HTML5 e CSS3</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu" />
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
         <h1>Meu Site</h1>
-        <menu>
+        <span class="material-symbols-outlined" onclick="clickMenu()">
+            menu
+            <!-- onclick = é um manipulador de eventos que executa um script JavaScript específico quando um usuário clica em um elemento -->
+        </span>
+        <menu id="items-menu">
             <ul>
                 <li><a href="#">Opção 1</a></li>
                 <li><a href="#">Opção 2</a></li>
@@ -27,5 +32,15 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor ipsum mollitia voluptates quisquam qui, nihil modi debitis reiciendis id alias! Dolorem cumque cupiditate voluptates eveniet ea deserunt fugit repellat doloribus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, blanditiis ipsum. Commodi saepe amet ad rerum excepturi ullam et. Aperiam adipisci fugiat omnis tempore asperiores ipsum eaque fugit itaque cum! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio eaque sapiente officia ex impedit molestiae sint mollitia, expedita quaerat debitis repellat alias non quidem accusantium officiis ducimus vitae ea? Iusto!</p>
         </article>
     </main>
+    <script>
+        function clickMenu() {
+            if (document.getElementById('items-menu').style.display == 'none' ) {
+                document.getElementById('items-menu').style.display = 'block';
+            }
+            else {
+                document.getElementById('items-menu').style.display = 'none'
+            }
+        }
+    </script>
 </body>
 </html>

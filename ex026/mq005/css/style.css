@@ -6,6 +6,11 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+h1 {
+    padding: 10px;
+    text-align: center;
+}
+
 body {
     background-color: lightgray;
 }
@@ -14,13 +19,23 @@ header {
     background-color: rgb(148, 148, 148);
 }
 
-h1 {
-    padding: 10px;
+header > span.material-symbols-outlined {
+    /* Como este ícone é uma "fonte" (icon fonts), a estilização é tratada como se fosse de fato uma fonte */
+    background-color: rgb(48, 48, 48);
+    color: white;
+    display: block;
     text-align: center;
+    padding: 10px;
+    cursor: pointer; /* Para o cursor virar uma "mãozinha" apontando ao passar o mouse */
+}
+
+header > span.material-symbols-outlined:hover {
+    background-color: white;
+    color: black;
 }
 
 menu {
-    display: block;
+    display: none; /* Para ficar oculto o menu até que seja clicado no ícone para expandi-lo */
 }
 
 menu > ul {
