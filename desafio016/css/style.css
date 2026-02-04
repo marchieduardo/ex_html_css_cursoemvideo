@@ -15,6 +15,7 @@
 
 body {
     background-color: #5f2c82;
+    height: 100vh;
 }
 
 #login {
@@ -26,8 +27,18 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    overflow: hidden; /* para ocultar qualquer conteúdo de um elemento que ultrapasse seus limites definidos (largura ou altura), impedindo rolagens indesejadas e cortando bordas de elementos */
+    overflow: hidden;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.45);
+    transition: width .5s, height .5s;
+    transition-timing-function: ease;
+
+    /*
+        overflow = Propriedade para definir como o navegador deve tratar o conteúdo de um elemento quando ele excede (transborda) as dimensões (altura ou largura) definidas para ele. Valor "hidden" -> oculta o que passa do limite definido.
+
+        transition = Propriedade que permite alterar os valores de outras propriedades CSS de forma suave e gradual ao longo de um período de tempo, em vez de uma mudança imediata.
+
+        transition-timing-function = Propriedade que define a curva de velocidade de uma transição, determinando se ela será linear, acelerada ou desacelerada ao longo de sua duração. Valor "ease" -> faz com que ela comece lenta, acelere no meio e termine devagar.
+    */
 }
 
 #imagem {
