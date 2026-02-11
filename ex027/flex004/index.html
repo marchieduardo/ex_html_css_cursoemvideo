@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamento dos eixos</title>
+    <style>
+        div.container {
+            background-color: lightgray;
+            height: 200px;
+
+            display: flex;
+            /* display: flex = propriedade CSS que transforma um elemento em um container flexível (flex container), permitindo organizar seus elementos filhos de forma inteligente, automática e responsiva, sem depender de métodos antigos como float ou position. Ele alinha itens em linha ou coluna, facilitando o alinhamento e a distribuição de espaço.  */
+            flex-flow: row nowrap;
+            justify-content: space-around; /* valor padrão é flex-start */
+            align-items: center; /* valor padrão é stretch */
+        }
+        
+        div.item {
+            background-color: gray;
+            border: 1px solid black;
+            text-align: center;
+
+            /* flex: auto; */
+            /* flex: auto = é um atalho que define um item flexível para crescer e encolher automaticamente (flex: 1 1 auto), ocupando o espaço disponível com base no seu tamanho original. Ele equivale a definir flex-grow: 1, flex-shrink: 1 e flex-basis: auto, permitindo que o item absorva espaço extra. */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+</body>
+</html>
