@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+    <style>
+        div.container {
+            background-color: lightgray;
+            height: 400px;
+
+            display: flex;
+            /* display: flex = propriedade CSS que transforma um elemento em um container flexível (flex container), permitindo organizar seus elementos filhos de forma inteligente, automática e responsiva, sem depender de métodos antigos como float ou position. Ele alinha itens em linha ou coluna, facilitando o alinhamento e a distribuição de espaço.  */
+            align-items: flex-start;
+        }
+        
+        div.item {
+            background-color: gray;
+            border: 1px solid black;
+            text-align: center;
+            padding: 20px;
+
+            /* flex: auto; */
+            /* flex: auto = é um atalho que define um item flexível para crescer e encolher automaticamente (flex: 1 1 auto), ocupando o espaço disponível com base no seu tamanho original. Ele equivale a definir flex-grow: 1, flex-shrink: 1 e flex-basis: auto, permitindo que o item absorva espaço extra. */
+        }
+
+        #item1 {
+            align-self: auto; /* valor padrão é "auto", que serve para herdar o alinhamento(align-items) do container pai. */
+        }
+
+        #item2 {
+            align-self: flex-start;
+        }
+
+        #item3 {
+            align-self: flex-end;
+        }
+        
+        #item5 {
+            align-self: center;
+        }
+        
+        #item7 {
+            align-self: stretch;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item" id="item1">A</div>
+        <div class="item" id="item2">B</div>
+        <div class="item" id="item3">C</div>
+        <div class="item" id="item4">D</div>
+        <div class="item" id="item5">E</div>
+        <div class="item" id="item6">F</div>
+        <div class="item" id="item7">G</div>
+    </div>
+</body>
+</html>
