@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+    <style>
+        div.container {
+            background-color: lightgray;
+
+            display: flex;
+            /* display: flex = propriedade CSS que transforma um elemento em um container flexível (flex container), permitindo organizar seus elementos filhos de forma inteligente, automática e responsiva, sem depender de métodos antigos como float ou position. Ele alinha itens em linha ou coluna, facilitando o alinhamento e a distribuição de espaço.  */
+            flex-flow: row wrap;
+        }
+        
+        div.item {
+            background-color: gray;
+            border: 1px solid black;
+            text-align: center;
+
+            /* flex: auto; */
+            /* flex: auto = é um atalho que define um item flexível para crescer e encolher automaticamente (flex: 1 1 auto), ocupando o espaço disponível com base no seu tamanho original. Ele equivale a definir flex-grow: 1, flex-shrink: 1 e flex-basis: auto, permitindo que o item absorva espaço extra. */
+            flex-basis: 100px; /* o valor padrão é "auto", que se adapta ao tamanho definido ao item, ou ao tamanho do conteúdo dentro do item. E caso defina um valor específico, ele funciona como um limite máximo, e não necessáriamente um tamanho absoluto */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">Outro conteúdo</div>
+        <div class="item">C</div>
+        <div class="item">Conteúdo um pouco maior</div>
+        <div class="item">E</div>
+        <div class="item">Conteúdo maior ainda, que vai ocupar mais espaço</div>
+        <div class="item">G</div>
+    </div>
+</body>
+</html>
