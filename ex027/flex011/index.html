@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+    <style>
+        div.container {
+            background-color: lightgray;
+
+            display: flex;
+            /* display: flex = propriedade CSS que transforma um elemento em um container flexível (flex container), permitindo organizar seus elementos filhos de forma inteligente, automática e responsiva, sem depender de métodos antigos como float ou position. Ele alinha itens em linha ou coluna, facilitando o alinhamento e a distribuição de espaço.  */
+        }
+        
+        div.item {
+            background-color: gray;
+            border: 1px solid black;
+            text-align: center;
+
+            /* flex: auto; */
+            /* flex: auto = é um atalho que define um item flexível para crescer e encolher automaticamente (flex: 1 1 auto), ocupando o espaço disponível com base no seu tamanho original. Ele equivale a definir flex-grow: 1, flex-shrink: 1 e flex-basis: auto, permitindo que o item absorva espaço extra. */
+            flex-basis: 200px;
+        }
+
+        #cx-a {
+            flex-shrink: 1; /* o valor padrão é 1 (diminui). define o encolhimento da caixa do item. valores maiores que 1 definem o quanto diminui proporcionalmente */
+            flex-grow: 1; /* o valor padrão é 0 (não cresce). define o aumento da caixa do item. valores maiores que 1 definem o quanto aumenta proporcionalmente */
+        }
+
+        #cx-b {
+            flex-shrink: 1;
+            flex-grow: 4;
+        }
+
+        #cx-c {
+            flex-shrink: 0;
+            flex-grow: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item" id="cx-a">A</div>
+        <div class="item" id="cx-b">B</div>
+        <div class="item" id="cx-c">C</div>
+    </div>
+</body>
+</html>
