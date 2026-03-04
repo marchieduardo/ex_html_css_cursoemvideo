@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5em;
+}
+
+p, h1, h2 {
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+.normal {
+    padding: 20px;
+}
+
+.flex-content {
+    padding: 20px;
+    background-color: rgb(156, 156, 156);
+}
