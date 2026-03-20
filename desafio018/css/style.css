@@ -49,5 +49,55 @@ nav a:hover {
   color: var(--destaque);
 }
 
+main {
+  display: grid;
+  grid-template-columns: auto 90vw auto;
+  gap: 20px;
+  margin-top: 20px;
+}
 
+section#ficha {
+  background-color: var(--fundo-card);
+  padding: 20px;
+  border-radius: 8px;
+  grid-column: 2;
+}
 
+img.foto {
+  width: 200px;
+  border-radius: 50%;
+  border: 5px solid var(--fundo-card);
+  outline: 5px solid var(--destaque);
+  display: block;
+  margin: auto;
+  margin-bottom: 20px;
+
+  /* Em caso de colocar uma imagem não quadrada, pode ser útil descomentar as declarações abaixo */
+  /* aspect-ratio: 1/1;
+  object-fit: cover;
+  overflow: hidden; */
+}
+
+section#ficha h1 {
+  color: var(--destaque);
+  margin: 15px 0;
+  font-size: 1.5em;
+}
+
+div#social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  gap: .5em;
+  margin-top: 15px;
+}
+
+div#social a {
+  color: var(--destaque);
+  transition: color .3s;
+}
+
+div#social a:hover {
+  color: var(--destaque-inverso);
+}
