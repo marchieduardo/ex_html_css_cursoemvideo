@@ -59,7 +59,7 @@ main {
 section#ficha {
   background-color: var(--fundo-card);
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 10px;
   grid-column: 2;
 }
 
@@ -110,12 +110,12 @@ article {
   background-color: var(--fundo-card);
   padding: 20px;
   margin-bottom: 20px;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
 article h2 {
   color: var(--destaque);
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 div#skill-container {
@@ -157,4 +157,34 @@ div#skill-container .progresso {
   height: 100%;
   border-radius: 5px;
   background-color: var(--destaque-inverso);
+}
+
+div#formacao-container {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 20px;
+}
+
+div#formacao-container .curso {
+  background-color: var(--fundo-principal);
+  border-radius: 10px;
+  border-left: 5px solid var(--destaque-inverso);
+  padding: 10px;
+  transition: border-width .5s, border-color .5s;
+}
+
+div#formacao-container .curso:hover {
+  border-left-width: 15px;
+  border-color: var(--destaque);
+  cursor: pointer;
+}
+
+div#formacao-container .periodo {
+  font-size: .8em;
+  font-weight: bold;
+  color: var(--texto);
+}
+
+div#formacao-container .instituicao {
+  color: var(--destaque);
 }
