@@ -63,7 +63,7 @@ section#ficha {
   grid-column: 2;
 }
 
-img.foto {
+section#ficha img {
   width: 200px;
   border-radius: 50%;
   border: 5px solid var(--fundo-card);
@@ -187,4 +187,77 @@ div#formacao-container .periodo {
 
 div#formacao-container .instituicao {
   color: var(--destaque);
+}
+
+div#projeto-container {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 20px;
+}
+
+div#projeto-container .projeto {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: var(--fundo-principal);
+  padding: 10px;
+  border-radius: 10px;
+  border-left: 5px solid var(--destaque-inverso);
+  transition: border-width .5s, border-color .5s;
+}
+
+div#projeto-container .projeto:hover {
+  border-left-width: 15px;
+  border-color: var(--destaque);
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  div#projeto-container .projeto {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}
+
+div#projeto-container img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  div#projeto-container img {
+    aspect-ratio: 1/1;
+    max-width: 20%;
+    max-height: 200px;
+  }
+}
+
+div#projeto-container .projeto-info {
+  max-width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  div#projeto-container .projeto-info {
+    max-width: 80%;
+  }
+}
+
+footer {
+  background-color: var(--destaque);
+  color: var(--texto-inverso);
+  text-align: center;
+  padding: 10px;
+}
+
+footer a {
+  color: var(--texto-inverso);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  color: var(--destaque-inverso);
 }

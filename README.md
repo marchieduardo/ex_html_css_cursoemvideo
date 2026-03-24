@@ -17,3 +17,7 @@
 <a href="https://marchieduardo.github.io/ex_html_css_cursoemvideo/desafio016">
     Visualizar o projeto Login
 </a>
+<br>
+<a href="https://marchieduardo.github.io/ex_html_css_cursoemvideo/desafio018">
+    Visualizar o projeto Portfólio
+</a>
