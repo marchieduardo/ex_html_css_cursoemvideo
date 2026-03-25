@@ -59,11 +59,25 @@ main {
   margin-top: 20px;
 }
 
+@media screen and (min-width: 768px) {
+  main {
+    grid-template-columns: auto 300px 1fr auto;
+  }
+}
+
 section#ficha {
   background-color: var(--fundo-card);
   padding: 20px;
   border-radius: 10px;
   grid-column: 2;
+}
+
+@media screen and (min-width: 768px) {
+  section#ficha {
+    height: fit-content;
+    position: sticky;
+    top: 65px;
+  }
 }
 
 section#ficha img {
@@ -107,6 +121,12 @@ div#social a:hover {
 
 section#detalhes {
   grid-column: 2;
+}
+
+@media screen and (min-width: 768px) {
+  section#detalhes {
+    grid-column: 3;
+  }
 }
 
 article {
