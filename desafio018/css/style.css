@@ -228,6 +228,11 @@ div#projeto-container {
   gap: 20px;
 }
 
+div#projeto-container a {
+  text-decoration: none;
+  color: var(--texto);
+}
+
 div#projeto-container .projeto {
   display: flex;
   flex-direction: column;
